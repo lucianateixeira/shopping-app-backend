@@ -17,7 +17,7 @@ router.post("/auth", async (req, res) => {
     User.findOne({ email }, async function (err, user) {
       if (err) {
         console.log("error");
-        res.status(400).json({ err: "Error finding in Database" });
+        res.status(400).json({ err: "Error finding Database" });
       }
       if (!user) {
         return res
